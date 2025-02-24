@@ -35,19 +35,11 @@ public:
 
     void setName(string name) {
 
-        int count = 0;
-
-        while (count < 3) {
+        while (true) {
 
             if (name.length() >= 5 && name.length() <= 20 && nameCheck(name)) {
                 this-> name= name;
                 return;
-            }
-
-            count++;
-            if (count == 3) {
-                cout << "Too many invalid attempts! Exiting..." << endl;
-                exit(1);
             }
             cout << "Enter a name with only alphabetic characters And It must be 5 - 20 characters  .Try Again: ";
             cin >> name;
